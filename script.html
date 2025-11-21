@@ -279,6 +279,8 @@
 			console.log('Embedded_svc is not loaded 2');
             s.setAttribute('src', 'https://ceamodasorg--hml.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function () {
+				console.log("Salesforce script carregado com sucesso!");
+				window.parent.postMessage({ status: "loaded" }, "*");
                 initESW(null);
             };
 			s.onerror = function(){
