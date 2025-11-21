@@ -80,10 +80,11 @@
 
 
 </body>
-<!--<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>-->
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
     window.addEventListener('message', receiver, false);
     function receiver(e) {
+
         console.log("chegou no receiver at", e.origin)
         if ((e.origin == 'https://www.cea.com.br') || (e.origin === 'https://atendimentohomolog.cea.com.br') || (e.origin === 'https://webchatbot-ia-frontend.dev.ceabr.io')
             || (e.origin === 'https://d38apqh8v0g3dv.cloudfront.net') || (e.origin === 'https://webchatbot-ia-frontend.cea.com.br') || (e.origin === 'https://chatbot-cea.dev.cea-ecommerce.com.br')) {
