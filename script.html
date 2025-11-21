@@ -114,10 +114,7 @@
             let ceapay = true
             let recordTypeId = _recordTypeID
 			
-			console.log('Teste função');
-			
-			var teste = parent.window.embedded_svc;
-			console.log('embedded_svc', teste);
+		
 			
 			
             embedded_svc.settings.displayHelpButton = true; //Ou falso
@@ -283,15 +280,23 @@
                 }
             });
         };
+		
+		console.log('Teste função');
+		
+		var teste = parent.window.embedded_svc;
+		console.log('embedded_svc', teste);
 
         if (!window.embedded_svc) {
 			console.log('Embedded_svc is not loaded');
             var s = document.createElement('script');
+			console.log('Embedded_svc is not loaded 2');
             s.setAttribute('src', 'https://ceamodasorg--hml.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function () {
                 initESW(null);
             };
+			console.log('Embedded_svc is not loaded 3');
             document.body.appendChild(s);
+			console.log('Embedded_svc is not loaded 4');
         } else {
 			console.log('Embedded_svc is loaded');
             initESW('https://service.force.com');
