@@ -76,6 +76,9 @@
 </head>
 
 <body>
+
+
+
 </body>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
@@ -212,17 +215,17 @@
             embedded_svc.settings.entryFeature = 'LiveAgent';
             //embedded_svc.settings.avatarImgURL = "https://chatbot-cea.dev.cea-ecommerce.com.br/assets/logo_sales.png"
             embedded_svc.init(
-                'https://ceamodasorg.my.salesforce.com',
-                'https://ceamodasorg.my.site.com/basedeconhecimento',
+                'https://ceamodasorg--hml.sandbox.my.salesforce.com',
+                'https://ceamodasorg--hml.sandbox.my.site.com/baseconhecimento',
                 gslbBaseURL,
-                '00D4x0000030zWu',
+                '00D050000004bJI',
                 'CeaPayChat', {
-                baseLiveAgentContentURL: 'https://c.la3-c1-ia4.salesforceliveagent.com/content',
-                deploymentId: '5724x000000M1uB',
+                baseLiveAgentContentURL: 'https://c.la12s-core1.sfdc-xwy4ub.salesforceliveagent.com/content',
+                deploymentId: '57205000000007g',
                 // buttonId: '5734x000000M2N6',  # ceapay
-                buttonId: _buttonID,
-                baseLiveAgentURL: 'https://d.la3-c1-ia4.salesforceliveagent.com/chat',
-                eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I4x000000DQYJEA4_17d68d6879e',
+                buttonId: '5730500000000HR',
+                baseLiveAgentURL: 'https://d.la12s-core1.sfdc-xwy4ub.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'C_A_Pay_Chat',
                 isOfflineSupportEnabled: false
             }
             );
@@ -266,7 +269,7 @@
 
         if (!window.embedded_svc) {
             var s = document.createElement('script');
-            s.setAttribute('src', 'https://ceamodasorg.lightning.force.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://ceamodasorg--hml.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function () {
                 initESW(null);
             };
@@ -476,6 +479,4 @@
     }
 </script>
 
-
 </html>
-
