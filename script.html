@@ -281,6 +281,11 @@
             s.onload = function () {
                 initESW(null);
             };
+			s.onerror = function(){
+				console.error("Falha ao carregar o script do Salesforce!");
+				window.parent.postMessage({ status: "error" }, "*");
+			
+			}
 			console.log('Embedded_svc is not loaded 3');
             document.body.appendChild(s);
 			console.log('Embedded_svc is not loaded 4');
