@@ -82,6 +82,7 @@
     //window.addEventListener('message', receiver, false);
 	
 	window.addEventListener('message', function(event) {
+		console.log('Evento de mensagem recebido');
         // Validate the origin to prevent malicious messages
         if (event.origin === 'https://expected.origin.com') { // Replace with the expected origin
             console.log('Message received:', event.data);
