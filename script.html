@@ -98,7 +98,7 @@
 
         console.log("chegou no receiver at", e.origin)
         if ((e.origin == 'https://www.cea.com.br') || (e.origin === 'https://atendimentohomolog.cea.com.br') || (e.origin === 'https://webchatbot-ia-frontend.dev.ceabr.io')
-            || (e.origin === 'https://d38apqh8v0g3dv.cloudfront.net') || (e.origin === 'https://webchatbot-ia-frontend.cea.com.br') || (e.origin === 'https://chatbot-cea.dev.cea-ecommerce.com.br')) {
+            || (e.origin === 'https://d38apqh8v0g3dv.cloudfront.net') || (e.origin === 'https://webchatbot-ia-frontend.cea.com.br') || (e.origin === 'https://chatbot-cea.dev.cea-ecommerce.com.br') || (e.origin === 'https://chatindex.vercel.app')) {
             payload = JSON.parse(e.data)
             if (payload.from === "sac") {
                 load_sales_sac(payload.email, payload.name, payload.cpf, payload.order, payload.msg)
@@ -280,6 +280,7 @@
         };
 
         if (!window.embedded_svc) {
+			console.log('Embedded_svc is not loaded');
             var s = document.createElement('script');
             s.setAttribute('src', 'https://ceamodasorg--hml.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function () {
@@ -287,6 +288,7 @@
             };
             document.body.appendChild(s);
         } else {
+			console.log('Embedded_svc is loaded');
             initESW('https://service.force.com');
         }
 
